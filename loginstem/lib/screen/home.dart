@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:loginstem/screen/feed.dart';
-import 'package:loginstem/screen/indextable.dart';
-import 'package:loginstem/screen/login.dart';
+
+import 'package:loginstem/screen/SignUp.dart';
 import 'package:loginstem/screen/register.dart';
+import 'package:loginstem/screen/login.dart';
+import 'package:loginstem/screen/url.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -27,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context, //ການລີງໄປຫນ້າອື່ນ
                         MaterialPageRoute(builder: (context) {
-                      return Registerscreen();
+                      return Test();
                     }));
                   },
                   icon: Icon(Icons.add),
@@ -45,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                     }));
                   },
                   icon: Icon(Icons.login),
-                  label: Text("ເຂົ້າສູ້ລະບົບ", style: TextStyle(fontSize: 20)),
+                  label: Text("ສ້າງບັນຊີ", style: TextStyle(fontSize: 20)),
                 ),
                 
               ),
@@ -55,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(//ການລີງໄປຫນ້າອື່ນ
                         builder: (context) {
-                      return Feed();
+                      return LoginScreenn();
                     }));
                   },
                   icon: Icon(Icons.login),
@@ -68,11 +69,11 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(//ການລີງໄປຫນ້າອື່ນ
                         builder: (context) {
-                      return Index();
+                      return const Urltable();
                     }));
                   },
                   icon: Icon(Icons.login),
-                  label: Text("ເຂົ້າສູ້ລະບົບ", style: TextStyle(fontSize: 20)),
+                  label: Text("ການຈອ້ງ", style: TextStyle(fontSize: 20)),
                 ),
               ),
             ],

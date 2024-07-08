@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:loginstem/screen/home.dart';
 
-import 'package:loginstem/screen/test.dart';
+
+
+
 
 
 void main() {
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginScreenn()
+      home: const HomeScreen()
     );
   }
 }

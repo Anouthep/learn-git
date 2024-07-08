@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
-class LoginScreenn extends StatelessWidget {
+class Loginscreen extends StatefulWidget {
+  const Loginscreen({super.key});
+
+  @override
+  State<Loginscreen> createState() => _LoginscreenState();
+}
+
+class _LoginscreenState extends State<Loginscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +33,7 @@ class LoginScreenn extends StatelessWidget {
                   Image.network('https://via.placeholder.com/150'), // Placeholder for logo
                   SizedBox(height: 16.0),
                   Text(
-                    'THYNK UNLIMITED',
+                    'QUICK TABLE',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -44,7 +51,7 @@ class LoginScreenn extends StatelessWidget {
               ),
               SizedBox(height: 32.0),
               Text(
-                'Login',
+                'Create New Account',
                 style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
@@ -86,6 +93,20 @@ class LoginScreenn extends StatelessWidget {
                 ),
                 style: TextStyle(color: Colors.white),
               ),
+                SizedBox(height: 16.0),
+               TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white.withOpacity(0.1),
+                  labelText: 'TEL',
+                  labelStyle: TextStyle(color: Colors.white),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                style: TextStyle(color: Colors.white),
+              ),
               SizedBox(height: 32.0),
               // Login Button
               ElevatedButton(
@@ -98,7 +119,7 @@ class LoginScreenn extends StatelessWidget {
                   ),
                 ),
                 child: Text(
-                  'Log in',
+                  'Sign Up',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16.0,
@@ -107,20 +128,12 @@ class LoginScreenn extends StatelessWidget {
               ),
               SizedBox(height: 16.0),
               // Create New Account Button
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Create New Account',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16.0,
-                  ),
-                ),
-              ),
+              
             ],
           ),
         ),
      ),
    );
+    
   }
 }
