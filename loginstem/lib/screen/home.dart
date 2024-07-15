@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:loginstem/screen/SignUp.dart';
+import 'package:loginstem/screen/booking.dart';
 import 'package:loginstem/screen/register.dart';
 import 'package:loginstem/screen/login.dart';
-import 'package:loginstem/screen/url.dart';
+import 'package:loginstem/screen/index.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -73,7 +74,20 @@ class HomeScreen extends StatelessWidget {
                     }));
                   },
                   icon: Icon(Icons.login),
-                  label: Text("ການຈອ້ງ", style: TextStyle(fontSize: 20)),
+                  label: Text("ຫນ້າຮານ", style: TextStyle(fontSize: 20)),
+                ),
+              ),
+                    SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(//ການລີງໄປຫນ້າອື່ນ
+                        builder: (context) {
+                      return const Booking();
+                    }));
+                  },
+                  icon: Icon(Icons.login),
+                  label: Text("ການຈ້ອງ", style: TextStyle(fontSize: 20)),
                 ),
               ),
             ],
